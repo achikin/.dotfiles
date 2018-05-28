@@ -1,0 +1,49 @@
+[user]
+	name = Anton Chikin
+	email = anton.m.chikin@gmail.com
+	signingkey = A11B93BB69BB35E6
+[color]
+        ui = auto
+[alias]
+  	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit 
+[push]
+	default = simple
+[core]
+	excludesfile = /Users/achikin/.gitignore_global
+	editor = vim
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[merge]
+	tool = opendiff
+	conflictstyle = diff3
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[difftool]
+	bcomp = trustExitCode
+	bcomp = cmd
+	bcomp = cmd
+[mergetool "opendiff"]
+[mergetool "[tool]"]
+	trustExitCode = true
+[mergetool "opendiff"]
+[diff]
+[difftool "diffmerge"]
+	cmd = /usr/bin/diffmerge \"$LOCAL\" \"$REMOTE\"
+[mergetool "diffmerge"]
+	trustExitCode = true
+	cmd = /usr/local/bin/diffmerge --merge --result=\"$MERGED\"\"$LOCAL\" \"$BASE\" \"$REMOTE\"
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	required = true
+	clean = git-lfs clean -- %f
+	process = git-lfs filter-process
+[commit]
+	gpgsign = true
+[rerere]
+	enabled = 1
