@@ -3,3 +3,5 @@
 !.gitignore
 !.spacemacs
 !.gitconfig
+!.curlrc
+!.tigrc

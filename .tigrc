@@ -1,0 +1,2 @@
+bind main ! !git revert %(commit)
+bind stage 1 stage-update-line
