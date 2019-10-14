@@ -10,15 +10,14 @@ export GOPATH=~/src/gocode
 export PATH=~/src/gocode/bin:$PATH
 export ANDROID_SDK_ROOT=/usr/local/share/android-sdk/25.2.3
 export ANDROID_HOME=/usr/local/share/android-sdk/25.2.3
-export GTAGSLABEL=universal-ctags
+export GTAGSLABEL=ctags
+export PATH=/Users/achikin/bin:$PATH
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 #Brew completion
 if [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
       . $(brew --prefix)/share/bash-completion/bash_completion
         fi
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 HISTCONTROL=ignoreboth
 
@@ -72,3 +71,12 @@ LEIN_FAST_TRAMPOLINE=y
 export GPG_TTY=$(tty)
 
 launchctl setenv PATH $PATH
+
+export NVM_DIR="$HOME/.nvm"
+  . "/usr/local/opt/nvm/nvm.sh"  
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+if [ -e /Users/achikin/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/achikin/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="/usr/local/opt/ruby/bin:$PATH"
